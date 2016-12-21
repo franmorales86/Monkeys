@@ -1,0 +1,226 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.theagilemonkeys</groupId>
+  <artifactId>customerApi</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>customerApi</name>
+  <description>API Rest to manage customer profiles</description>
+  
+  <properties>  
+        <jersey.version>1.18.3</jersey.version>
+        <version.oltu>1.0.2</version.oltu>  
+  </properties>
+  
+  
+  <repositories>
+    <repository>
+      <id>JBoss repository</id>
+      <url>http://repository.jboss.com/maven2/</url>
+    </repository>
+  </repositories>
+  
+      <dependencies>
+          
+       	<dependency>  
+   			<groupId>junit</groupId>  
+   			<artifactId>junit</artifactId>  
+   			<version>3.8.1</version>  
+   			<scope>test</scope>  
+  		</dependency>
+
+        <dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+		
+        <dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-bundle</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20140107</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-core</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+		
+		<dependency>  
+   			<groupId>com.sun.jersey</groupId>  
+   			<artifactId>jersey-servlet</artifactId>  
+   			<version>${jersey.version}</version>  
+		</dependency>  
+  		
+  		<dependency>  
+   			<groupId>com.sun.jersey</groupId>  
+   			<artifactId>jersey-json</artifactId>  
+   			<version>${jersey.version}</version>  
+  		</dependency>  
+  		
+		<dependency>
+		    <groupId>javax.persistence</groupId>
+		    <artifactId>persistence-api</artifactId>
+		    <version>1.0.2</version>
+		</dependency>
+  		
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate</artifactId>
+		    <version>3.2.3.ga</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>hibernate-annotations</groupId>
+			<artifactId>hibernate-annotations</artifactId>
+			<version>3.3.0.GA</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>hibernate-commons-annotations</groupId>
+			<artifactId>hibernate-commons-annotations</artifactId>
+			<version>3.0.0.GA</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.9</version>
+		</dependency>
+		
+		<dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>jta</artifactId>
+            <version>1.1</version>
+		</dependency>
+		
+		<!-- Hibernate library dependecy start -->
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>antlr</groupId>
+			<artifactId>antlr</artifactId>
+			<version>2.7.7</version>
+		</dependency>
+		<!-- Hibernate library dependecy end -->
+		
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+ 		</dependency>
+ 		
+		<dependency>
+            <groupId>org.apache.oltu.oauth2</groupId>
+            <artifactId>org.apache.oltu.oauth2.common</artifactId>
+            <version>${version.oltu}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.oltu.oauth2</groupId>
+            <artifactId>org.apache.oltu.oauth2.authzserver</artifactId>
+            <version>${version.oltu}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.oltu.oauth2</groupId>
+            <artifactId>org.apache.oltu.oauth2.resourceserver</artifactId>
+            <version>${version.oltu}</version>
+        </dependency>
+        
+        <dependency>
+		  <groupId>org.apache.oltu.oauth2</groupId>
+		  <artifactId>org.apache.oltu.oauth2.client</artifactId>
+		  <version>${version.oltu}</version>
+		</dependency>
+		
+        <dependency>
+	      <groupId>org.apache.oltu.oauth2</groupId>
+	      <artifactId>org.apache.oltu.oauth2.httpclient4</artifactId>
+	      <version>${version.oltu}</version>
+	    </dependency>
+	    
+        <dependency>
+	      <groupId>org.apache.oltu.oauth2</groupId>
+	      <artifactId>org.apache.oltu.oauth2.dynamicreg.client</artifactId>
+	      <version>${version.oltu}</version>
+	    </dependency>
+	
+	    <dependency>
+	      <groupId>org.apache.oltu.oauth2</groupId>
+	      <artifactId>org.apache.oltu.oauth2.dynamicreg.server</artifactId>
+	      <version>${version.oltu}</version>
+	    </dependency>	  
+	        
+        
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-web-api</artifactId>
+            <version>7.0</version>
+            <scope>provided</scope>
+        </dependency>
+		
+		
+    </dependencies>
+    
+    <build>
+        <finalName>customerApi</finalName>
+        
+        <plugins>
+		    <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                </configuration>
+            </plugin>
+		    <plugin>
+				<groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>8.1.7.v20120910</version>
+                <configuration>
+                    <stopKey>foo</stopKey>
+                    <stopPort>9999</stopPort>
+                    <connectors>
+                        <connector implementation="org.eclipse.jetty.server.bio.SocketConnector">
+                            <port>8081</port>
+                            <maxIdleTime>60000</maxIdleTime>
+                        </connector>
+                    </connectors>
+                </configuration>
+		 	</plugin>
+		 	
+		 	<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		    
+        </plugins>
+    </build>
+	
+  
+</project>
